@@ -1,0 +1,29 @@
+/* mamhao.cn h5 reset.css up:2015-06-13 */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,th,td,pre,code,form,fieldset,legend,input,textarea,blockquote,figure,button{margin:0;padding:0;}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary { display: block; }
+body,button,input,select,textarea{ font:14px/1.8 'Lato', 'Helvetica Neue', 'PingFang SC', 'Myriad Pro', 'Hiragino Sans GB', 'microsoft yahei'; color:#666;}
+html,body{-webkit-user-select:none; -webkit-text-size-adjust:none; background-color:#FFF;}
+audio,canvas,progress,video { display: inline-block; vertical-align: baseline; }
+h1,h2,h3,h4,h5,h6{ font-size:100%;}
+ol,ul{list-style:none;}
+table{ border-collapse:collapse; border-spacing:0;}
+sup,sub{font-size:100%;vertical-align: baseline;}
+a{text-decoration: none; outline: none; -webkit-tap-highlight-color: transparent;  /*设置的tap  A标签的时候出现的黑色高亮*/ }
+a:active{ outline: 0; }
+i,em{ font-style: normal; }
+del,ins,s,u{text-decoration:none;}
+fieldset,img,addr,acronym{border:0;}
+img,addr,acronym,input,textarea,iframe,button{vertical-align:middle;}
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;resize:none;outline:none;}
+textarea{overflow:auto;}
+a,button,input[type="text"],input[type="tel"],input[type="email"],section, div,li,span,ul{ -webkit-tap-highlight-color: transparent; }
+/* 去除iphone ipad 设备默认按钮样式 */
+input[type="button"],
+input[type="submit"],
+input[type="reset"] { -webkit-appearance: none; border-radius: 0; border: 0;}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {-webkit-appearance: none !important; margin: 0;}
+input::-moz-placeholder, textarea::-moz-placeholder { color: #CCC;}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #CCC;}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #CCC;}
+/* 清除浮动 */
+.clearfix:after{content:"."; display:block; height:0; visibility:hidden; clear:both;}
