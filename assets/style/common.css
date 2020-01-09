@@ -1,33 +1,189 @@
-html,body{
+html, body {
     background-color: #ffffff;
 }
-.g-flex-column{
+
+.g-flex-column {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.g-flex-row{
+
+.g-flex-row {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.g-flex{
-    flex:1;
+
+.g-flex {
+    flex: 1;
 }
-.g-head{
+
+.g-head {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.g-main{
+.g-main {
     flex: 1;
     width: 100%;
 }
-.g-foot{
+
+.g-foot {
     max-width: 980px;
     padding-top: 20px;
     margin-bottom: 60px;
     border-top: 1px solid;
+}
+
+.u-btn {
+    text-align: center;
+    padding: 2px 15px;
+    background-color: #F14B4A;
+    border-radius: 20px;
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    min-width: 52px;
+    cursor: pointer;
+}
+
+.flex-warp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+.f1 {
+    font-size: 20px;
+}
+
+.f2 {
+    font-size: 24px;
+}
+
+.f3 {
+    font-size: 28px;
+}
+
+.f5 {
+    font-size: 84px;
+}
+
+.c1 {
+    color: #F14B4A;
+}
+
+.c2 {
+    color: #eee;
+}
+
+.c3 {
+    color: #aaa;
+}
+
+.holder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -35%)
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.bg-c1 {
+    background-color: #fff;
+}
+
+.bg-c2 {
+    background-color: #eee;
+}
+
+.flex1 {
+    flex: 1;
+}
+
+.flipInX {
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    -webkit-animation-name: flipInX;
+    animation-name: flipInX;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes flipInX {
+    from {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    60% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        opacity: 1;
+    }
+
+    80% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+
+    to {
+        -webkit-transform: perspective(400px);
+        transform: perspective(400px);
+    }
+}
+
+@keyframes flipInX {
+    from {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    60% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        opacity: 1;
+    }
+
+    80% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+
+    to {
+        -webkit-transform: perspective(400px);
+        transform: perspective(400px);
+    }
 }

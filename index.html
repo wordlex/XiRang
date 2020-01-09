@@ -40,101 +40,18 @@
     .goods-info{}
     .goods-price{padding: 0 20px;text-align: center;}
 
-    .u-btn{padding: 2px 15px;background-color: #F14B4A;border-radius: 20px;color: #fff;display: inline-block;font-size: 12px;}
-
-    .flex-warp{display: flex;flex-direction: row;align-items: center;justify-content: space-around;}
-
-    h1{font-size: 42px;}
-    .f3{font-size: 28px;}
-    .f5{font-size: 84px;}
-    .c1{color: #F14B4A;}
-    .c2{color: #eee;}
-    .c3{color: #aaa;}
-    .holder{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-35%)}
-    .strong{font-weight: bold;}
-
-    .bg-c1{background-color: #fff}
-
-    .flex1{flex: 1;}
-
-
-    .flipInX {
-      -webkit-backface-visibility: visible !important;
-      backface-visibility: visible !important;
-      -webkit-animation-name: flipInX;
-      animation-name: flipInX;
-      -webkit-animation-duration: 1s;
-      animation-duration: 1s;
-      -webkit-animation-fill-mode: both;
-      animation-fill-mode: both;
+    .m-dialog{width: 100%;height: 100%;position: fixed;top:0;bottom:0;left: 0;right: 0;z-index: 100;}
+    .m-dialog .mask{width: 100%;height: 100%;background-color: #000;opacity: .6;}
+    .m-dialog-main{
+      background-color: #fff;position: absolute;z-index: 101;top: 50%;left:50%;transform: translate(-50%,-50%);
+      width: 60%;box-shadow: 0 10px 10px #666;
     }
-
-    @-webkit-keyframes flipInX {
-      from {
-        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-        opacity: 0;
-      }
-
-      40% {
-        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-        transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-      }
-
-      60% {
-        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-        transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-        opacity: 1;
-      }
-
-      80% {
-        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-        transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-      }
-
-      to {
-        -webkit-transform: perspective(400px);
-        transform: perspective(400px);
-      }
-    }
-
-    @keyframes flipInX {
-      from {
-        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-        opacity: 0;
-      }
-
-      40% {
-        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-        transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-        -webkit-animation-timing-function: ease-in;
-        animation-timing-function: ease-in;
-      }
-
-      60% {
-        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-        transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-        opacity: 1;
-      }
-
-      80% {
-        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-        transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-      }
-
-      to {
-        -webkit-transform: perspective(400px);
-        transform: perspective(400px);
-      }
-    }
-
+    .m-dialog-title{text-align: center;padding: 14px;border-bottom: 1px solid #eee;}
+    .m-dialog-content{padding: 14px 28px;display: flex;}
+    .m-dialog-content .goods-img{background-color: #f5f5f5;padding: 18px;}
+    .m-dialog-content .goods-info{flex:1;margin-left: 28px;}
+    .info-block{padding: 10px;background-color: #f5f5f5;}
+    .m-dialog-foot{text-align: center;padding: 18px;border-top: 1px solid #eee;}
   </style>
 </head>
 <body class="g-flex-column">
@@ -200,7 +117,7 @@
             <span class="c3">1件/4.75吨</span>
           </p>
         </div>
-        <div class="u-btn">查看详情</div>
+        <div class="u-btn js-btn-detail">查看详情</div>
       </div>
       <div class="m-catalog-bar">
         <h2 class="flex1">分类名称</h2>
@@ -225,7 +142,7 @@
             <span class="c3">1件/4.75吨</span>
           </p>
         </div>
-        <div class="u-btn">查看详情</div>
+        <div class="u-btn js-btn-detail">查看详情</div>
       </div>
       <div class="m-catalog-bar">
         <h2 class="flex1">分类名称</h2>
@@ -250,11 +167,11 @@
             <span class="c3">1件/4.75吨</span>
           </p>
         </div>
-        <div class="u-btn">查看详情</div>
+        <div class="u-btn js-btn-detail">查看详情</div>
       </div>
     </div>
   </div>
-
+  <!--关于我们-->
   <div class="m-box bg-c1">
     <div class="m-box-title">
       <span class="f5 c2">ABOUT US</span>
@@ -265,7 +182,7 @@
       <p>镀锡板（俗称马口铁）是指表面镀有一薄层金属锡的钢板。镀锡板是将低碳钢轧制成约2mm厚的钢板，经酸洗、冷轧、电解清洗退火、平整、剪边加工，再经清洗、电镀、软熔、钝化处理、涂油后剪切成镀锡板板材成品，镀锡板所用镀锡为高纯锡（Sn>99.8%）。锡层也可用热浸镀法涂敷，此法所得镀锡板锡层较厚，用锡量大，镀锡后不需进行纯化处理。</p>
     </div>
   </div>
-
+  <!--新闻中心-->
   <div class="m-box">
     <div class="m-box-title">
       <span class="f5 c2">NEWS</span>
@@ -273,6 +190,36 @@
     </div>
   </div>
 </main>
+<div class="m-dialog" hidden>
+  <div class="mask"></div>
+  <div class="m-dialog-main">
+    <div class="m-dialog-title">宝钢股份 镀锡板卷</div>
+    <div class="m-dialog-content">
+      <div class="goods-img">
+        <img src="assets/image/goods1.jpg" alt="">
+      </div>
+      <div class="goods-info">
+        <p class="strong f1">宝钢股份 镀锡板卷</p>
+        <div class="info-block">
+          <p class="c3">2.00*1020*C W280VK</p>
+          <p>价格：<span class="c1 f3">￥5999.00</span> </p>
+          <p>重量：<span class="c4">9.060</span>吨</p>
+        </div>
+        <p>规格：2.8/2.8*电化学钝化(镀锡)*R2*切边*420*纯锡(Sn)</p>
+        <p>钢厂资源号：L9W0100000</p>
+        <p>产地：武汉青山</p>
+        <p>出厂日期：2019-12-18</p>
+        <p>存放地：湖北省</p>
+        <p>库位：2B12-3</p>
+        <p>技术标准：Q/WG(LZ)30</p>
+        <p>质量等级：正品</p>
+      </div>
+    </div>
+    <!--<div class="m-dialog-foot">-->
+      <!--<div class="u-btn">关闭</div>-->
+    <!--</div>-->
+  </div>
+</div>
 <footer class="g-foot">
   页脚
 </footer>
@@ -296,5 +243,11 @@
       $('.m-goods-list-item').addClass('flipInX');
     }
   },3000)
+  $('.mask').on('click',function(){
+    $('.m-dialog').fadeOut();
+  })
+  $('.js-btn-detail').on('click',function(){
+    $('.m-dialog').fadeIn();
+  })
 </script>
 </html>
