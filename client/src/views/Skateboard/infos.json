@@ -1,0 +1,84 @@
+{
+  "name": "街式滑板",
+  "levels": [
+    {
+      "level": "一级",
+      "standards": [
+        "能够在平地完成滑行10m内多次向内外卡宾转弯，最终刹停。",
+        "能够在平地20m的往返滑行中利用荡板蛇形方式绕过3个或以上障碍并用台板头折返。",
+        "利用荡板蛇形方式绕过3个障碍，并能够不以前轮着地的方式滑下不低于5cm台阶。"
+      ]
+    },
+    {
+      "level": "二级",
+      "standards": [
+        "能够熟练掌握一级技术水平的技能",
+        "助跑快速上板滑行,并做到抓板跳最终收板",
+        "侧向以及正反卡板头,(3选1)并能做到带板跳跃(原地或滑行四个轮子离地即可)",
+        "利用任何所学技能完成卡桥并落地,能做到倒板"
+      ]
+    },
+    {
+      "level": "三级",
+      "standards": [
+        "能够熟练掌握二级技术水平的技能",
+        "能在斜面|弧面道具上熟练完成Drop in动作",
+        "弧/斜面道具上的正反滑行180°内/外向转身，正反滑行360°内/外转身",
+        "能在接地台子|杆子上做到正向/背向50-50滑行，或者跳上斜面|弧面道具"
+      ]
+    },
+    {
+      "level": "四级",
+      "standards": [
+        "能够熟练掌握三级技术水平的技能",
+        "滑行中POP shovit (5次成2次)",
+        "滑行正滑内外带板转身动作(frontside180°和backside180°)(5次成2次)",
+        "ollie过地面5cm障碍(3次成1次)"
+      ]
+    },
+    {
+      "level": "五级",
+      "standards": [
+        "能够熟练掌握四级技术水平的技能。",
+        "20cm高BOX上完成正面5050(3次成1次)",
+        "滑行中完成kickflip或heelflip(5次成2次)",
+        "ollie过地面20cm(一立）障碍（3次成1次）"
+      ]
+    },
+    {
+      "level": "六级",
+      "standards": [
+        "能够熟练掌握五级技术水平的技能",
+        "Bank to Bank上完成正向滑行kickflip或heelflip（5次成2次）",
+        "平杆子上完成Frontside boardslide/Backside boardslide(3次成1次）",
+        "斜杆上完成完成Frontside boardslide/Backside boardslide ( 5次成2次）"
+      ]
+    },
+    {
+      "level": "七级",
+      "standards": [
+        "1、能够熟练掌握六级技术水平的技能。",
+        "2、BOX上完成Frontside/Backside 50滑动平衡动作（5次成2次）",
+        "3、滑行内外转翻板动作或倒滑内外转翻板动作选其一个（5次成2次）",
+        "4、大乱360Flip/HardFlip/Frontside 360Flip/Backside 360F1ip/Impossible选其中一个（5次成2次）"
+      ]
+    },
+    {
+      "level": "八级",
+      "standards": [
+        "1、能够熟练掌握七级技术水平的技能。",
+        "2、杆子k-grind或Nose grind滑动平衡（5次成2次）",
+        "3、滑行中Kickflip或heelflip一立（20cm）（5次成2次）",
+        "4、高30cm杆子上完成Frontside lipslide/ Backside lipslide/Smith grind/Feeble grind选其中一个（5次成2次）"
+      ]
+    },
+    {
+      "level": "九级",
+      "standards": [
+        "1、能够熟练掌握八级技术水平的技能。",
+        "2、高30cm道具上完成Kickflip/Heelflip/50/5050/boardslide动作接滑动平衡动作（3次成1次）",
+        "3、高30cmBOX式杆子上完成自选Nose blunt /Tail blunt动作或Frontside tailslide /Backside tailslide选其中"
+      ]
+    }
+  ]
+}

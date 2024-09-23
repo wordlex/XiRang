@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "pid": 0,
+    "label": "性别",
+    "label_en": "Sex"
+  },
+  {
+    "id": 2,
+    "pid": 1,
+    "label": "男",
+    "label_en": "Male"
+  },
+  {
+    "id": 3,
+    "pid": 1,
+    "label": "女",
+    "label_en": "Female"
+  },
+  {
+    "id": 4,
+    "pid": 0,
+    "label": "季节/时间",
+    "label_en": "season"
+  },
+  {
+    "id": 5,
+    "pid": 4,
+    "label": "春",
+    "label_en": "spring"
+  },
+  {
+    "id": 6,
+    "pid": 4,
+    "label": "夏",
+    "label_en": "summer"
+  }
+]

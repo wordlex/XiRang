@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Month View Calendar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            max-width: 500px;
+            margin: auto;
+        }
+        .day {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            height: 100px;
+        }
+        .day-header {
+            font-weight: bold;
+            background-color: #f0f0f0;
+        }
+    </style>
+    
+</head>
+<body>
+
+<div class="calendar">
+    <!-- Days of the week -->
+    <div class="day-header">Mon</div>
+    <div class="day-header">Tue</div>
+    <div class="day-header">Wed</div>
+    <div class="day-header">Thu</div>
+    <div class="day-header">Fri</div>
+    <div class="day-header">Sat</div>
+    <div class="day-header">Sun</div>
+
+    <!-- Calendar days will be inserted here -->
+</div>
+<script>
+      function generateCalendar(year, month) {
+    const calendar = document.querySelector('.calendar');
+    const firstDay = (new Date(year, month, 1).getDay() + 6) % 7; // 获取月第一天是星期几
+    const daysInMonth = new Date(year, month + 1, 0).getDate(); // 获取月天数
+
+    // 清空之前的日历
+    calendar.querySelectorAll('.day').forEach(day => day.remove());
+
+    // 填充空白天数
+    for (let i = 0; i < firstDay; i++) {
+        const emptyCell = document.createElement('div');
+        emptyCell.classList.add('day');
+        calendar.appendChild(emptyCell);
+    }
+
+    // 填充日历中的日期
+    for (let day = 1; day <= daysInMonth; day++) {
+        const dayCell = document.createElement('div');
+        dayCell.classList.add('day');
+        dayCell.textContent = day;
+        calendar.appendChild(dayCell);
+    }
+}
+
+// 设置当前月份的日历
+const today = new Date();
+generateCalendar(today.getFullYear(), today.getMonth());
+
+</script>
+</body>
+</html>
