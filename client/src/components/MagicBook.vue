@@ -1,7 +1,9 @@
 <template>
   <div class="">
     <ul>
-      <li>一级分类</li>
+      <li>
+        <a href="/diary/year">2024</a>
+      </li>
     </ul>
   </div>
   <div>
